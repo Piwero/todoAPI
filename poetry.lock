@@ -124,8 +124,8 @@ optional = false
 python-versions = "*"
 
 [[package]]
-name = "flake9"
-version = "3.8.3"
+name = "flake8"
+version = "3.9.2"
 description = "the modular source code checker: pep8 pyflakes and co"
 category = "dev"
 optional = false
