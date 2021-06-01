@@ -1,3 +1,29 @@
+[tool.black]
+line-length = 88
+exclude = '''
+/(
+  | migrations
+  | .venv
+)/
+'''
+
+[tool.flake8]
+ignore = ["F405", "E501", "W503", "E731", "E741",]
+max-line-length = 88
+exclude = [
+    ".git", "migrations", "node_modules", "docs", ".venv", "frontend"
+]
+statistics = false
+
+[tool.isort]
+line_length = 88
+skip_glob = "**/migrations/*.py"
+multi_line_output = 3
+profile = "black"
+filter_files = true
+include_trailing_comma = true
+force_grid_wrap = 2
+
 [tool.poetry]
 name = "todoapi"
 version = "0.1.0"
