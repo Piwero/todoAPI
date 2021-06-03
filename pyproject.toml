@@ -17,7 +17,7 @@ statistics = false
 
 [tool.isort]
 line_length = 88
-skip_glob = "**/migrations/*.py"
+skip_glob = "*/migrations/.py"
 multi_line_output = 3
 profile = "black"
 filter_files = true
@@ -31,15 +31,15 @@ description = "todo app created on Django and React to test APIs"
 authors = ["Piwero <piwero@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9,<4.0"
-Django = "^3.2.3"
+python = "3.7.9"
+Django = "3.2.3"
 
 [tool.poetry.dev-dependencies]
-ipdb = "^0.13.8"
-black = "^21.5b1"
-isort = "^5.8.0"
+ipdb = "0.13.8"
+black = "21.5b1"
+isort = "5.8.0"
 flake9 = "3.8.3"
-pre-commit = "^2.13.0"
+pre-commit = "2.13.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
