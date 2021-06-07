@@ -121,6 +121,17 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "djangorestframework"
+version = "3.12.4"
+description = "Web APIs for Django, made easy."
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+django = ">=2.2"
+
+[[package]]
 name = "filelock"
 version = "3.0.12"
 description = "A platform independent file lock."
@@ -504,7 +515,7 @@ testing = ["pytest (>=4.6)", "pytest-checkdocs (>=1.2.3)", "pytest-flake8", "pyt
 [metadata]
 lock-version = "1.1"
 python-versions = "3.7.9"
-content-hash = "45fed0da76347d6bd885efab60a5e5d22af22078013611b70d1b662f39c7fce5"
+content-hash = "f24b8bb465854882cfc3f93e48da1ae672af6faa3886ab32040c786e6bbb55ba"
 
 [metadata.files]
 appdirs = [
@@ -550,6 +561,10 @@ distlib = [
 django = [
     {file = "Django-3.2.3-py3-none-any.whl", hash = "sha256:7e0a1393d18c16b503663752a8b6790880c5084412618990ce8a81cc908b4962"},
     {file = "Django-3.2.3.tar.gz", hash = "sha256:13ac78dbfd189532cad8f383a27e58e18b3d33f80009ceb476d7fcbfc5dcebd8"},
+]
+djangorestframework = [
+    {file = "djangorestframework-3.12.4-py3-none-any.whl", hash = "sha256:6d1d59f623a5ad0509fe0d6bfe93cbdfe17b8116ebc8eda86d45f6e16e819aaf"},
+    {file = "djangorestframework-3.12.4.tar.gz", hash = "sha256:f747949a8ddac876e879190df194b925c177cdeb725a099db1460872f7c0a7f2"},
 ]
 filelock = [
     {file = "filelock-3.0.12-py3-none-any.whl", hash = "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"},
