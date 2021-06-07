@@ -33,6 +33,8 @@ authors = ["Piwero <piwero@gmail.com>"]
 [tool.poetry.dependencies]
 python = "3.7.9"
 Django = "3.2.3"
+djangorestframework = "^3.12.4"
+django-cors-headers = "^3.7.0"
 
 [tool.poetry.dev-dependencies]
 ipdb = "0.13.8"
