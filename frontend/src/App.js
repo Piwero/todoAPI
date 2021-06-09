@@ -1,16 +1,31 @@
 import React, { Component} from 'react';
+import axios from 'axios';
 
-const list = [{"id":1,"title":"Create api endpoint","body":"Configuration with URLs, views, serializers."},{"id":2,"title":"Consume API","body":"Call API endpoint to get a 200!"}]
 
 class App extends Component{
-  constructor(props) {
-    super(props);
-      this.state = {list};
-    }
-  render(){
+
+      state = {
+        todos: []
+      };
+      componentDidMount() {
+        this.getTodos();
+      }
+      getTodos() {
+        axios
+        .get("http://127.0.0.1:8000/api/")
+        .then(res => {
+          this.setState({
+            todos: res.data
+          });
+        })
+        .catch(err => {
+          console.log(err);
+        });
+      }
+    render() {
     return(
       <div>
-        {this.state.list.map(item => (
+        {this.state.todos.map(item => (
           <div key={item.id}>
             <h2>{item.id}.- {item.title}</h2>
               <p>{item.body}</p>
