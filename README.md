@@ -14,6 +14,10 @@ virtualenv .venv -p python3
 pip install Poetry
 poetry install
 ```
+```commandline
+cd frontend
+npm run install
+```
 
 ### Activate pre-commit configuration
 ```commandline
@@ -26,10 +30,18 @@ cd backend
 python manage.py migrate
 ```
 
-### Run server
+## Run server
 
 #### Run Backend
 ```commandline
 cd backend
 python manage.py runserver
+```
+
+### With a 2nd console open
+
+#### Run Frontend
+```commandline
+cd frontend
+npm run start
 ```
