@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component} from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const list = [{"id":1,"title":"Create api endpoint","body":"Configuration with URLs, views, serializers."},{"id":2,"title":"Consume API","body":"Call API endpoint to get a 200!"}]
+
+class App extends Component{
+  constructor(props) {
+    super(props);
+      this.state = {list};
+    }
+  render(){
+    return(
+      <div>
+        {this.state.list.map(item => (
+          <div key={item.id}>
+            <h2>{item.id}.- {item.title}</h2>
+              <p>{item.body}</p>
+          </div>
+        ))}
+        </div>
+    );
+        }
+  }
+
 
 export default App;
